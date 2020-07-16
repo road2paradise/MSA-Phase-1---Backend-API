@@ -32,7 +32,7 @@ namespace StudentSIMS.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Address>> GetAddress(int id)
         {
-            var address = await _context.Address.Include(c => c.Student).FindAsync(id);
+            var address = await _context.Address.FindAsync(id);
 
             if (address == null)
             {
