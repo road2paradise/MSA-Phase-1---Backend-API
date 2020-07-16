@@ -75,8 +75,7 @@ namespace StudentSIMS.Controllers
         }
 
         // POST: api/Addresses
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+
         [HttpPost]
         public async Task<ActionResult<Address>> PostAddress(Address address)
         {
@@ -103,7 +102,7 @@ namespace StudentSIMS.Controllers
         }
 
         // Adding address based off his/her studentId.
-        [HttpPost("{id}")]
+        [HttpPost("{studentid}")]
         public async Task<ActionResult<Address>> PostStudentAddress(Address address, int id)
         {
             // checks if student is within the Student context / is a real entry in the database.
@@ -143,10 +142,10 @@ namespace StudentSIMS.Controllers
         }
 
 
-        // PUT: api/Addresses/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("/api/StudentAddress/{id}")]
+        // PUT: api/StudentAddress/{studentid}
+        // Allows students to edit their own addresses given the address ID and their student ID.
+ 
+        [HttpPut("/api/StudentAddress/{studentid}")]
         public async Task<IActionResult> PutStudentAddress(int id, Address address)
         {
             // Initially checks if there is an address with the studentID in the table with the one passed in.
