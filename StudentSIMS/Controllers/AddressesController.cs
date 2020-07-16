@@ -25,7 +25,7 @@ namespace StudentSIMS.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Address>>> GetAddress()
         {
-            return await _context.Address.ToListAsync();
+            return await _context.Address.Include(c => c.Student).ToListAsync();
         }
 
         // GET: api/Addresses/5
@@ -104,35 +104,17 @@ namespace StudentSIMS.Controllers
             }
 
             if (_context.Address.Any(o => o.studentId == id)) {
-                return NotFound();
+                return NoContent();
 
             } else {
                 _context.Address.Add(address);
+                address.studentId = id;
                 await _context.SaveChangesAsync();
 
-                return CreatedAtAction("GetAddress", id = address.studentId, address);
+                return CreatedAtAction("GetAddress", new { id = address.addressID }, address);
             }
 
         }
-
-        // PUT: api/Addresses/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("/api/Address/Student/{studentId}")]
-        public async Task<IActionResult> PutStudentAddress(int studentId, Address address)
-        {
-            if (studentId != address.studentId)
-            {
-                return BadRequest();
-            }
-            address.studentId = studentId;
-            _context.Entry(address).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-           return NoContent();
-
-        }
-
         // DELETE: api/Addresses/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Address>> DeleteAddress(int id)

@@ -17,16 +17,7 @@ namespace StudentSIMS.Models
         public string lastName { get; set; }
         public string emailAddress { get; set; }
         public int phoneNumber { get; set; }
+
     }
-    public class Address
-    {
-        public int addressID { get; set; }
-        public int streetNumber { get; set; }
-        public string street { get; set; }
-        public string suburb { get; set; }
-        public string city { get; set; }
-        public int postcode { get; set; }
-        [ForeignKey("Student")]
-        public int studentId { get; set; }
-    }
+
 }

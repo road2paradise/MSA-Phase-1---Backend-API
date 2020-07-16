@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentSIMS.Data;
 
 namespace StudentSIMS.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    partial class StudentContextModelSnapshot : ModelSnapshot
+    [Migration("20200716111940_alterModelss")]
+    partial class alterModelss
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,8 +47,6 @@ namespace StudentSIMS.Migrations
 
                     b.HasKey("addressID");
 
-                    b.HasIndex("studentId");
-
                     b.ToTable("Address");
                 });
 
@@ -75,15 +75,6 @@ namespace StudentSIMS.Migrations
                     b.HasKey("studentId");
 
                     b.ToTable("Student");
-                });
-
-            modelBuilder.Entity("StudentSIMS.Models.Address", b =>
-                {
-                    b.HasOne("StudentSIMS.Models.Student", "Student")
-                        .WithMany()
-                        .HasForeignKey("studentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
