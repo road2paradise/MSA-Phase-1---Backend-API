@@ -9,8 +9,6 @@ namespace StudentSIMS.Models
 {
     public class Student
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int studentId { get; set; }
         public string firstName { get; set; }
         public string middleName { get; set; }
