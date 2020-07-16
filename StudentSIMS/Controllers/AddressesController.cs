@@ -145,7 +145,7 @@ namespace StudentSIMS.Controllers
         // PUT: api/StudentAddress/{studentid}
         // Allows students to edit their own addresses given the address ID and their student ID.
  
-        [HttpPut("/api/StudentAddress/{studentid}")]
+        [HttpPut("/api/StudentAddress/{id}")]
         public async Task<IActionResult> PutStudentAddress(int id, Address address)
         {
             // Initially checks if there is an address with the studentID in the table with the one passed in.
