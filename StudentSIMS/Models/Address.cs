@@ -14,6 +14,7 @@ namespace StudentSIMS.Models
         public string street { get; set; }
         public string suburb { get; set; }
         public string city { get; set; }
+        public string country { get; set; }
         public int postcode { get; set; }
         public int studentId { get; set; }
         public Student Student { get; set; }
