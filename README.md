@@ -4,7 +4,7 @@ To access my Swagger UI with my working Back-end API please click [here](https:/
 
 ## Create an API method that **adds** new address for a student using his/her StudentID
 My back-end does a sanity check to see if the student is actually in the table, otherwise it throws a NotFound().
-Student is then able to provide details ( `StudentId`, `Street Number`, `Street`, `Suburb`, `City`, `Postcode` and `Country` ) in the request. The back-end will then auto-generate a new PK to the `addressID` and this will automatically be associated with the student using the FK `StudentId`
+Student is then able to provide details ( `StudentId`, `Street Number`, `Street`, `Suburb`, `City`, `Postcode` and `Country` ) in the request. The back-end will then auto-generate a new PK (`addressID`) and this will automatically be associated with the student using the FK (`StudentId`).
 
 
 ## Create an API method that **changes** the address of a student using his/her StudentID
@@ -16,7 +16,7 @@ I used the endpoint `/api/StudentAddress/{id}` to differ from updating a normal 
 ![address_azure](/StudentSIMS/images/addressAzureSQL..PNG?raw=true)
 
 
-In the above picture 
+In the above picture you can see that the `studentId` is associated with the following photo's student entry in `studentId` number 62.
 
 
 
@@ -25,3 +25,8 @@ In the above picture
 
 ## Images showing the API Endpoints hosted on Azure using the Swagger UI.
 ![Swagger_UI](/StudentSIMS/images/SwaggerAPI.PNG?raw=true)
+
+
+The above picture shows my two new API methods.
+1. `POST` /api/Addresses/{id}
+2. `PUT` /api/StudentAddress/{id}.
