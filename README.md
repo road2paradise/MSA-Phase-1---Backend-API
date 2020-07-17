@@ -15,6 +15,12 @@ I used the endpoint `/api/StudentAddress/{id}` to differ from updating a normal 
 
 ![address_azure](/StudentSIMS/images/addressAzureSQL.PNG?raw=true)
 
+
+In the above picture 
+
+
+
+
 ![student_azure](/StudentSIMS/images/studentAzureSQL.PNG?raw=true)
 
 ## Images showing the API Endpoints hosted on Azure using the Swagger UI.
