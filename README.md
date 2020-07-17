@@ -1,7 +1,18 @@
-## MSA API+DATABASE MODULE.
+# MSA API+DATABASE MODULE.
 
-1. Create another Address table with various attributes. 
-2. Show SQL Database through the Query Editor (Screenshots) for both tables with rows of example instances.
+
+## Show SQL Database through the Query Editor (Screenshots) for both tables with rows of example instances.
+
+## Image below shows the address and student tables in the Query editor.
+
+![address_azure](/StudentSIMS/images/addressAzureSQL.PNG?raw=true)
+
+![student_azure](/StudentSIMS/images/studentAzureSQL.PNG?raw=true)
+
+## Create API method that **adds** new address for a student using his/her StudentId.
+
+
+
 
 
 # 10. Assignments for API + Database module <a name="assignments"></a>
@@ -15,10 +26,6 @@ Students will need to submit a link to GitHub repository. Your `README.md` shoul
 
 ## 10.2 Project Guidelines
 
-- Create a **code-first** API server with Azure SQL Database
-  - Database:
-    - Create another table named **Address** with attributes: `StudentId`, `Street Number`, `Street`, `Suburb`, `City`, `Postcode` and `Country`. The **Student** table would have a one-to-many relationship with this table. Please assign appropriate datatype (i.e. `string`, `int` etc.) for each of the attributes.
-    - Show SQL database through the Query editor (**screenshots**) for both tables with rows of example instances
 
   - API manipulate the created Azure Database using Code-First migration:
     - Create basic CRUD requests for the **Student** and **Address** table.
