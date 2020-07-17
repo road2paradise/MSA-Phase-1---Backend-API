@@ -13,7 +13,7 @@ I used the endpoint `/api/StudentAddress/{id}` to differ from updating a normal 
 
 ## Images showing the Address and Student tables in Azure.
 
-![address_azure](/StudentSIMS/images/addressAzureSQL.PNG?raw=true)
+![address_azure](/StudentSIMS/images/addressAzureSQL..PNG?raw=true)
 
 
 In the above picture 
@@ -21,7 +21,7 @@ In the above picture
 
 
 
-![student_azure](/StudentSIMS/images/studentAzureSQL.PNG?raw=true)
+![student_azure](/StudentSIMS/images/studentAzureSQL..PNG?raw=true)
 
 ## Images showing the API Endpoints hosted on Azure using the Swagger UI.
 ![Swagger_UI](/StudentSIMS/images/SwaggerAPI.PNG?raw=true)
