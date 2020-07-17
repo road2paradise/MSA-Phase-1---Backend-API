@@ -6,10 +6,33 @@ To access my Swagger UI with my working Back-end API please click [here](https:/
 My back-end does a sanity check to see if the student is actually in the table, otherwise it throws a NotFound().
 Student is then able to provide details ( `StudentId`, `Street Number`, `Street`, `Suburb`, `City`, `Postcode` and `Country` ) in the request. The back-end will then auto-generate a new PK (`addressID`) and this will automatically be associated with the student using the FK (`StudentId`).
 
+Below shows the user adding to `studentId` #62 the address. I have not given an `addressID` as this is allocated automatically.
+
+![addressAPI1](/StudentSIMS/images/addressAPI1.PNG?raw=true)
+
+Below is an image of the response from the Backend showing the address with the new PK `addressID` and the associated `studentId` and student.
+
+![addressAPI2](/StudentSIMS/images/addressAPI2.PNG?raw=true)
 
 ## Create an API method that **changes** the address of a student using his/her StudentID
 I assumed here that it meant that given a Student's ID they are able to update their address (singular) assuming that they have the addressID of the address he/she want to update.
 I used the endpoint `/api/StudentAddress/{id}` to differ from updating a normal address using `/api/Address/{id}`.
+
+Below shows the user updating their address using their `studentId` as the input. `addressID` needs to be entered as there can be multiple addressses associated with one student.
+
+![studentaddressAPI1](/StudentSIMS/images/studentAPI1.PNG?raw=true)
+
+Below shows the response from the Backend showing 204 meaning no content to show.
+
+![studentaddressAPI2](/StudentSIMS/images/studentAPI2.PNG?raw=true)
+
+Below is the `GET` request on all addresses which shows the address has been updated successfully.
+
+
+![studentaddressAPI3](/StudentSIMS/images/studentAPI3.PNG?raw=true)
+
+
+
 
 ## Images showing the Address and Student tables in Azure.
 
