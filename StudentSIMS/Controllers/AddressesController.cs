@@ -102,7 +102,7 @@ namespace StudentSIMS.Controllers
         }
 
         // Adding address based off his/her studentId.
-        [HttpPost("{studentid}")]
+        [HttpPost("{id}")]
         public async Task<ActionResult<Address>> PostStudentAddress(Address address, int id)
         {
             // checks if student is within the Student context / is a real entry in the database.
