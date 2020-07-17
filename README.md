@@ -1,7 +1,10 @@
 # MSA API+DATABASE MODULE.
 
+I decided to do the back-end pathway to complete the MSA Phase-1.
 
-## Show SQL Database through the Query Editor (Screenshots) for both tables with rows of example instances.
+Please use the link to my endpoints hosted on [azure](https://kenny-student.azurewebsites.net/index.html)
+
+
 
 ## Image below shows the address and student tables in the Query editor.
 
