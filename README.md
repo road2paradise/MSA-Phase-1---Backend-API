@@ -1,6 +1,52 @@
-# MSA API+DATABASE MODULE.
+# Microsoft Student Accelerator Phase 1 - Backend API
 
-To access my Swagger UI with my working Back-end API please click [here](https://kenny-student.azurewebsites.net/index.html)
+# Basic Overview
+
+Created as a module to complete Microsoft Student Accelerator Phase 1 - Backend Pathway.
+
+To access my Swagger UI with my solution please click [here.](https://kenny-student.azurewebsites.net/index.html)
+
+## Tasks:
+- Database
+  - Create an additional Address with attributes:  `StudentId`, `Street Number`, `Street`, `Suburb`, `City`, `Postcode` and `Country` and assign appropriate datatype for each of     the attributes.
+  - Show SQL Database through the Query Editor (**screenshots**) for both tables with rows of example instances.
+- API
+  - Create basic CRUD requests for the **Student** and **Address** table.
+  - Create an API method that **adds** new address for a student using his/her StudentId.
+  - Create an API method that **changes** the address of a student using his/her Student Id.
+  - **Screenshot** of Swagger UI showing all API Endpoints.
+
+
+# Database
+
+```json 
+[
+  {
+    "addressID": 0,
+    "streetNumber": 0,
+    "street": "string",
+    "suburb": "string",
+    "city": "string",
+    "country": "string",
+    "postcode": 0,
+    "studentId": 0,
+    "student": {
+      "studentId": 0,
+      "firstName": "string",
+      "middleName": "string",
+      "lastName": "string",
+      "emailAddress": "string",
+      "phoneNumber": 0
+    }
+  }
+]
+
+
+```
+
+
+
+
 
 ## Create an API method that **adds** new address for a student using his/her StudentID
 My back-end does a sanity check to see if the student is actually in the table, otherwise it throws a NotFound().
