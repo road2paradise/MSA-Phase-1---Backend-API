@@ -19,31 +19,37 @@ To access my Swagger UI with my solution please click [here.](https://kenny-stud
 
 # Database
 
-An Address table has the following JSON object model created with code-first.
+An Address table has the following JSON object model created with code-first approach.
 
 StudentId has been given as a **foreign key** which points to the Student table.
 
 ```json
-[
-  {
-    "addressID": 0,
-    "streetNumber": 0,
-    "street": "string",
-    "suburb": "string",
-    "city": "string",
-    "country": "string",
-    "postcode": 0,
-    "studentId": 0,
-    "student": {
-      "studentId": 0,
-      "firstName": "string",
-      "middleName": "string",
-      "lastName": "string",
-      "emailAddress": "string",
-      "phoneNumber": 0
-    }
-  }
-]
+Address{
+addressID	integer($int32)
+streetNumber	integer($int32)
+street	string
+nullable: true
+suburb	string
+nullable: true
+city	string
+nullable: true
+country	string
+nullable: true
+postcode	integer($int32)
+studentId	integer($int32)
+student	Student{
+studentId	integer($int32)
+firstName	string
+nullable: true
+middleName	string
+nullable: true
+lastName	string
+nullable: true
+emailAddress	string
+nullable: true
+phoneNumber	integer($int32)
+}
+}
 ```
 
 #
